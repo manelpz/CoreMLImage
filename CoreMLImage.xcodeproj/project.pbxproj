@@ -13,6 +13,7 @@
 		13E4164F269D4E3000867A94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E4164D269D4E3000867A94 /* Main.storyboard */; };
 		13E41651269D4E3800867A94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13E41650269D4E3800867A94 /* Assets.xcassets */; };
 		13E41654269D4E3800867A94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13E41652269D4E3800867A94 /* LaunchScreen.storyboard */; };
+		13E4165D269D50CA00867A94 /* YOLOv3Tiny.mlkitmodel in Sources */ = {isa = PBXBuildFile; fileRef = 13E4165C269D50C900867A94 /* YOLOv3Tiny.mlkitmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		13E41650269D4E3800867A94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13E41653269D4E3800867A94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		13E41655269D4E3800867A94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		13E4165C269D50C900867A94 /* YOLOv3Tiny.mlkitmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = YOLOv3Tiny.mlkitmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		13E41646269D4E3000867A94 /* CoreMLImage */ = {
 			isa = PBXGroup;
 			children = (
+				13E4165C269D50C900867A94 /* YOLOv3Tiny.mlkitmodel */,
 				13E41647269D4E3000867A94 /* AppDelegate.swift */,
 				13E41649269D4E3000867A94 /* SceneDelegate.swift */,
 				13E4164B269D4E3000867A94 /* ViewController.swift */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E4164C269D4E3000867A94 /* ViewController.swift in Sources */,
+				13E4165D269D50CA00867A94 /* YOLOv3Tiny.mlkitmodel in Sources */,
 				13E41648269D4E3000867A94 /* AppDelegate.swift in Sources */,
 				13E4164A269D4E3000867A94 /* SceneDelegate.swift in Sources */,
 			);
