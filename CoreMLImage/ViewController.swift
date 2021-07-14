@@ -54,6 +54,24 @@ class ViewController: UIViewController {
                 self.dataLabel.text = "\(firstResult)"
             }
         }
+        
+        guard let ciimageForUse = CIImage(image: self.dataImage.image!) else{
+            print("CIImage not loaded from UIImage")
+            return
+        }
+        
+        //run request
+        
+        let handler = VNImageRequestHandler(cgImage: ciimageForUse)
+        
+        DispatchQueue.global().async {
+            do{
+                try handler.perform([request])
+            }catch{
+                print(error.localizedDescription)
+            }
+        }
+        
     }
     
     //System Functions
