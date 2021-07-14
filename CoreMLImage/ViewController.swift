@@ -45,7 +45,14 @@ class ViewController: UIViewController {
             (request, error) in
             
             guard let result = request.results as? [VNClassificationObservation],
-                  let firstResult
+                  let firstResult =  result.first else {
+                print("Not found")
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.dataLabel.text = "\(firstResult)"
+            }
         }
     }
     
