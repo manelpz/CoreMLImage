@@ -13,6 +13,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    //variables
+    
+    //IBOutlet
+    
+    @IBOutlet var dataImage: UIImageView!
+    @IBOutlet var dataLabel: UILabel!
+    
+    //IBAction
+    
+ 
+    @IBAction func takePhoto(_ sender: Any) {
+    }
+    
+    @IBAction func selectPhoto(_ sender: Any) {
+    }
+    
+    //Functions
+    
+    //System Functions
+    
 
 
 }

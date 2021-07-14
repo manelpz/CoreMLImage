@@ -25,9 +25,9 @@
                                     <constraint firstAttribute="width" constant="414" id="qp5-rf-zpQ"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando ..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-ho-cQ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-ho-cQ9">
                                 <rect key="frame" x="20" y="656" width="374" height="168"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <color key="highlightedColor" name="AccentColor"/>
                             </label>
@@ -38,6 +38,9 @@
                                     <constraint firstAttribute="height" constant="30" id="Jo6-cJ-pdj"/>
                                 </constraints>
                                 <state key="normal" title="Tomar foto"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bfx-xN-FHO"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Df-Ab-AxB">
                                 <rect key="frame" x="262" y="824" width="132" height="30"/>
@@ -46,6 +49,9 @@
                                     <constraint firstAttribute="width" constant="132" id="iR8-Cd-MHu"/>
                                 </constraints>
                                 <state key="normal" title="Seleccionar foto"/>
+                                <connections>
+                                    <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bln-Xo-Wfq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -68,6 +74,10 @@
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vpi-1A-Huq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dataImage" destination="ViH-CN-ERy" id="anj-bm-hst"/>
+                        <outlet property="dataLabel" destination="6PX-ho-cQ9" id="IIU-hL-Q0r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
