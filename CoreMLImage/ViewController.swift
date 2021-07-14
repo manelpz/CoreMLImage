@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Vision
+import CoreML
 
 class ViewController: UIViewController {
 
@@ -31,6 +33,21 @@ class ViewController: UIViewController {
     }
     
     //Functions
+    
+    func detectImage(){
+        dataLabel.text = "Cargando ..."
+        guard let model = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
+            print("Error loading the model")
+            return
+        }
+        
+        let request  = VNCoreMLRequest(model: model){
+            (request, error) in
+            
+            guard let result = request.results as? [VNClassificationObservation],
+                  let firstResult
+        }
+    }
     
     //System Functions
     
