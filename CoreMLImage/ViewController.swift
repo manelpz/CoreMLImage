@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         
         //run request
         
-        let handler = VNImageRequestHandler(cgImage: ciimageForUse)
+        let handler = VNImageRequestHandler(ciImage: ciimageForUse)
         
         DispatchQueue.global().async {
             do{
