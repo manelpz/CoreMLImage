@@ -42,17 +42,16 @@ class ViewController: UIViewController {
             return
         }
         
-        let request  = VNCoreMLRequest(model: model){
-            (request, error) in
+        let request1  = VNCoreMLRequest(model: model) { (request, error) in
             
-            guard let result = request.results as? [VNClassificationObservation],
-                  let firstResult =  result.first else {
-                print("Not found")
+            guard let resultados = request.results as? [VNClassificationObservation]
+                  else {// let firstResult = nil else {
+                print("Not found results")
                 return
             }
             
             DispatchQueue.main.async {
-                self.dataLabel.text = "\(firstResult)"
+               // self.dataLabel.text = "\(firstResult)"
             }
         }
         
@@ -61,13 +60,15 @@ class ViewController: UIViewController {
             return
         }
         
+        
+        
         //run request
         
         let handler = VNImageRequestHandler(ciImage: ciimageForUse)
         
         DispatchQueue.global().async {
             do{
-                try handler.perform([request])
+                try handler.perform([request1])
             }catch{
                 print(error.localizedDescription)
             }
