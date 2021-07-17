@@ -9,32 +9,37 @@ import UIKit
 import Vision
 import CoreML
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        detectImage()
+       // detectImage()
     }
     
     //variables
     
     //IBOutlet
-    
     @IBOutlet var dataImage: UIImageView!
     @IBOutlet var dataLabel: UILabel!
     
     //IBAction
-    
- 
     @IBAction func takePhoto(_ sender: Any) {
     }
     
     @IBAction func selectPhoto(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.photoLibrary
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }else{
+            print("Unable to access photo library")
+        }
     }
     
     //Functions
-    
     func detectImage(){
         dataLabel.text = "Loading..."
         
@@ -44,11 +49,10 @@ class ViewController: UIViewController {
         }
         
         let request  = VNCoreMLRequest(model: model) { (request, error) in
-            
             guard let result = request.results as? [VNClassificationObservation],
                   let firstResult = result.first else {
-                self.dataLabel.text = "Not found results"
-                return
+                    self.dataLabel.text = "Not found results"
+                    return
             }
             
             DispatchQueue.main.async {
@@ -81,7 +85,16 @@ class ViewController: UIViewController {
     }
     
     //System Functions
-    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let pickedImage = info[UIImagePickerController.InfoKey.originalImage] as? UIImage{
+            self.dataImage.image = pickedImage
+            self.dataImage.contentMode = .scaleAspectFill
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+        
+        detectImage()
+    }
 
 
 }
