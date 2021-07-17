@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1393EB5826A2960B006F141D /* MobileNet.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1393EB5726A2960B006F141D /* MobileNet.mlmodel */; };
 		13E41648269D4E3000867A94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E41647269D4E3000867A94 /* AppDelegate.swift */; };
 		13E4164A269D4E3000867A94 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E41649269D4E3000867A94 /* SceneDelegate.swift */; };
 		13E4164C269D4E3000867A94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E4164B269D4E3000867A94 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1393EB5726A2960B006F141D /* MobileNet.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MobileNet.mlmodel; sourceTree = "<group>"; };
 		13E41644269D4E3000867A94 /* CoreMLImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreMLImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13E41647269D4E3000867A94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13E41649269D4E3000867A94 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		13E41646269D4E3000867A94 /* CoreMLImage */ = {
 			isa = PBXGroup;
 			children = (
+				1393EB5726A2960B006F141D /* MobileNet.mlmodel */,
 				13E4165C269D50C900867A94 /* YOLOv3Tiny.mlkitmodel */,
 				13E41647269D4E3000867A94 /* AppDelegate.swift */,
 				13E41649269D4E3000867A94 /* SceneDelegate.swift */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13E4164C269D4E3000867A94 /* ViewController.swift in Sources */,
+				1393EB5826A2960B006F141D /* MobileNet.mlmodel in Sources */,
 				13E4165D269D50CA00867A94 /* YOLOv3Tiny.mlkitmodel in Sources */,
 				13E41648269D4E3000867A94 /* AppDelegate.swift in Sources */,
 				13E4164A269D4E3000867A94 /* SceneDelegate.swift in Sources */,

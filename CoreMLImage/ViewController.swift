@@ -36,26 +36,27 @@ class ViewController: UIViewController {
     //Functions
     
     func detectImage(){
-        dataLabel.text = "Cargando ..."
-        guard let model = try? VNCoreMLModel(for: YOLOv3Tiny().model) else {
+        dataLabel.text = "Loading..."
+        
+        guard let model = try? VNCoreMLModel(for: MobileNet().model) else{
             print("Error loading the model")
             return
         }
         
-        let request1  = VNCoreMLRequest(model: model) { (request, error) in
+        let request  = VNCoreMLRequest(model: model) { (request, error) in
             
-            guard let resultados = request.results as? [VNClassificationObservation]
-                  else {// let firstResult = nil else {
-                print("Not found results")
+            guard let result = request.results as? [VNClassificationObservation],
+                  let firstResult = result.first else {
+                self.dataLabel.text = "Not found results"
                 return
             }
             
             DispatchQueue.main.async {
-               // self.dataLabel.text = "\(firstResult)"
+                self.dataLabel.text = "\(firstResult.identifier)"
             }
         }
         
-        guard let ciimageForUse = CIImage(image: self.dataImage.image!) else{
+        guard let ciimage = CIImage(image: self.dataImage.image!) else{
             print("CIImage not loaded from UIImage")
             return
         }
@@ -64,15 +65,18 @@ class ViewController: UIViewController {
         
         //run request
         
-        let handler = VNImageRequestHandler(ciImage: ciimageForUse)
+        let handler = VNImageRequestHandler(ciImage: ciimage)
         
-        DispatchQueue.global().async {
+        DispatchQueue.global(qos: .userInitiated).async {
             do{
-                try handler.perform([request1])
+                try handler.perform([request])
             }catch{
                 print(error.localizedDescription)
             }
+            
+           
         }
+        
         
     }
     

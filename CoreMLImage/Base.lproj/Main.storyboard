@@ -17,16 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ViH-CN-ERy">
-                                <rect key="frame" x="0.0" y="264" width="414" height="392"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="414" id="CJZ-5J-3Fe"/>
-                                    <constraint firstAttribute="height" constant="392" id="S9s-ib-1bq"/>
-                                    <constraint firstAttribute="width" constant="414" id="qp5-rf-zpQ"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-ho-cQ9">
-                                <rect key="frame" x="20" y="656" width="374" height="168"/>
+                                <rect key="frame" x="20" y="802.5" width="374" height="21.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" systemColor="systemGray2Color"/>
                                 <color key="highlightedColor" name="AccentColor"/>
@@ -34,7 +26,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2V-Qk-kyc">
                                 <rect key="frame" x="20" y="824" width="104" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="104" id="5IK-zG-eDo"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="104" id="5IK-zG-eDo"/>
                                     <constraint firstAttribute="height" constant="30" id="Jo6-cJ-pdj"/>
                                 </constraints>
                                 <state key="normal" title="Tomar foto"/>
@@ -43,16 +35,22 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Df-Ab-AxB">
-                                <rect key="frame" x="262" y="824" width="132" height="30"/>
+                                <rect key="frame" x="282" y="824" width="112" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Tge-8o-eR2"/>
-                                    <constraint firstAttribute="width" constant="132" id="iR8-Cd-MHu"/>
                                 </constraints>
                                 <state key="normal" title="Seleccionar foto"/>
                                 <connections>
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bln-Xo-Wfq"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="258" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ViH-CN-ERy">
+                                <rect key="frame" x="19" y="261" width="375" height="375"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="b55-E3-TNI"/>
+                                    <constraint firstAttribute="height" constant="375" id="rAb-ec-sZx"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,18 +58,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Df-Ab-AxB" secondAttribute="trailing" constant="20" id="37B-du-1vG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F2V-Qk-kyc" secondAttribute="bottom" constant="8" id="6Ma-7T-cSP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Df-Ab-AxB" secondAttribute="bottom" constant="8" id="7SM-jr-HM8"/>
+                            <constraint firstItem="8Df-Ab-AxB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F2V-Qk-kyc" secondAttribute="trailing" constant="8" symbolic="YES" id="85U-A2-y2T"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PX-ho-cQ9" secondAttribute="trailing" constant="20" id="9Ug-ub-UK2"/>
-                            <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="EM1-eQ-54h"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" constant="20" id="EdH-Ov-kcc"/>
                             <constraint firstItem="6PX-ho-cQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FJo-aW-lgP"/>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="6PX-ho-cQ9" secondAttribute="bottom" id="KC9-Lb-s4v"/>
-                            <constraint firstItem="ViH-CN-ERy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PGh-hU-6sh"/>
+                            <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="217" id="TQW-Ko-JM7"/>
+                            <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="TsL-A4-zdY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PX-ho-cQ9" secondAttribute="trailing" constant="20" id="U1b-Ki-M2f"/>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bUS-MW-y7Z"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" id="cMU-So-XUy"/>
-                            <constraint firstItem="6PX-ho-cQ9" firstAttribute="top" secondItem="ViH-CN-ERy" secondAttribute="bottom" id="hEM-hG-qpQ"/>
-                            <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="220" id="lF6-3g-QRd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" id="tmx-mI-fbl"/>
-                            <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vpi-1A-Huq"/>
                         </constraints>
                     </view>
                     <connections>
