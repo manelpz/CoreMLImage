@@ -3,7 +3,7 @@
 //  CoreMLImage
 //
 //  Created by Emmanuel Lopez Guerrero on 12/07/21.
-//
+//ff
 
 import UIKit
 import Vision
@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-       // detectImage()
+        detectImage()
     }
     
     //variables
@@ -25,6 +25,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //IBAction
     @IBAction func takePhoto(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            imagePicker.allowsEditing = true
+            self.present(imagePicker, animated: true, completion: nil)
+        }else{
+            fatalError("No access allowed to camera")
+        }
     }
     
     @IBAction func selectPhoto(_ sender: Any) {
@@ -42,8 +51,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //Functions
     func detectImage(){
         dataLabel.text = "Loading..."
-        
-        guard let model = try? VNCoreMLModel(for: MobileNet().model) else{
+        //maskDetectionModel
+        //MobileNet
+        guard let model = try? VNCoreMLModel(for: maskDetectionModel().model) else{
             print("Error loading the model")
             return
         }
@@ -56,7 +66,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             DispatchQueue.main.async {
-                self.dataLabel.text = "\(firstResult.identifier)"
+                self.dataLabel.text = "\(firstResult.identifier) \(firstResult.confidence * 100)%"
             }
         }
         
