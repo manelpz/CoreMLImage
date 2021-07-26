@@ -14,7 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        detectImage()
+        //detectImage()
     }
     
     //variables
@@ -62,11 +62,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             guard let result = request.results as? [VNClassificationObservation],
                   let firstResult = result.first else {
                     self.dataLabel.text = "Not found results"
+                self.dataLabel.textColor = UIColor.red
                     return
             }
             
             DispatchQueue.main.async {
                 self.dataLabel.text = "\(firstResult.identifier) \(firstResult.confidence * 100)%"
+                self.dataLabel.textColor = UIColor.blue
             }
         }
         

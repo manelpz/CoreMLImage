@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cargando ..." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-ho-cQ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick an image of photo" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-ho-cQ9">
                                 <rect key="frame" x="20" y="675" width="374" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="113" id="7GU-Lt-gqa"/>
@@ -59,6 +59,12 @@
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bln-Xo-Wfq"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proof of concept" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVP-zd-a88">
+                                <rect key="frame" x="143" y="108" width="128" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -68,12 +74,15 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PX-ho-cQ9" secondAttribute="trailing" constant="20" id="9Ug-ub-UK2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" constant="20" id="EdH-Ov-kcc"/>
                             <constraint firstItem="6PX-ho-cQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FJo-aW-lgP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVP-zd-a88" secondAttribute="trailing" constant="143" id="FPv-K6-ast"/>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="6PX-ho-cQ9" secondAttribute="bottom" id="KC9-Lb-s4v"/>
+                            <constraint firstItem="hVP-zd-a88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="MkQ-Ga-TFR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F2V-Qk-kyc" secondAttribute="bottom" constant="44" id="P8z-ca-3fR"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="TsL-A4-zdY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PX-ho-cQ9" secondAttribute="trailing" constant="20" id="U1b-Ki-M2f"/>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bUS-MW-y7Z"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="qpe-qW-eEF"/>
+                            <constraint firstItem="hVP-zd-a88" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="143" id="vRz-US-tZS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Df-Ab-AxB" secondAttribute="bottom" constant="44" id="wsQ-OU-LvF"/>
                         </constraints>
                     </view>
