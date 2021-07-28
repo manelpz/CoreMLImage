@@ -59,10 +59,14 @@
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bln-Xo-Wfq"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proof of concept" textAlignment="natural" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVP-zd-a88">
-                                <rect key="frame" x="116" y="102" width="182" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proof of concept" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVP-zd-a88">
+                                <rect key="frame" x="116" y="102" width="182" height="26.5"/>
                                 <color key="tintColor" red="0.33488750960000002" green="0.67764088779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26.5" id="1oi-wJ-L7p"/>
+                                    <constraint firstAttribute="width" constant="182" id="SCc-2t-4YW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" systemColor="systemBlueColor"/>
                                 <color key="highlightedColor" red="1" green="0.1213044363" blue="0.1094311161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
