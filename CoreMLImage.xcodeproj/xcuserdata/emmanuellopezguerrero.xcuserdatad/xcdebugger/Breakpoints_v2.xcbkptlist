@@ -14,8 +14,8 @@
             filePath = "CoreMLImage/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "detectImage()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "CoreMLImage/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "86"
-            endingLineNumber = "86"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
             landmarkName = "detectImage()"
             landmarkType = "7">
             <Locations>
@@ -78,10 +78,10 @@
             filePath = "CoreMLImage/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "detectImage()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -94,10 +94,10 @@
             filePath = "CoreMLImage/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "detectImage()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -110,8 +110,8 @@
             filePath = "CoreMLImage/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "detectImage()"
             landmarkType = "7">
          </BreakpointContent>

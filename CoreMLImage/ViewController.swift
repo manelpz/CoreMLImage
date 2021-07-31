@@ -15,6 +15,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         //detectImage()
+        TakePhotoButton.layer.cornerRadius =  TakePhotoButton.bounds.size.height/2
+        SelectButton.layer.cornerRadius = SelectButton.bounds.size.height/2
     }
     
     //variables
@@ -22,9 +24,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //IBOutlet
     @IBOutlet var dataImage: UIImageView!
     @IBOutlet var dataLabel: UILabel!
+
+    @IBOutlet var TakePhotoButton: UIButton!
+    @IBOutlet var SelectButton: UIButton!
     
     //IBAction
     @IBAction func takePhoto(_ sender: Any) {
+        
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
             let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
