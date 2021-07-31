@@ -67,7 +67,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             DispatchQueue.main.async {
-                self.dataLabel.text = "\(firstResult.identifier) \(firstResult.confidence * 100)%"
+                self.dataLabel.text = "\(firstResult.identifier)\(Int(firstResult.confidence * 100))%"
                 self.dataLabel.textColor = UIColor.blue
             }
         }
