@@ -21,6 +21,8 @@
                                 <rect key="frame" x="19" y="558" width="376" height="113"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="113" id="PL8-wJ-1dZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="113" id="n9J-l9-tRW"/>
+                                    <constraint firstAttribute="width" constant="376" id="taz-0t-INU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -81,20 +83,28 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="3rU-6a-bdc"/>
+                            <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="6PX-ho-cQ9" secondAttribute="bottom" constant="79" id="8ZQ-OI-pdD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PX-ho-cQ9" secondAttribute="trailing" constant="19" id="E5q-Xm-Hgm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" constant="20" id="EdH-Ov-kcc"/>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="6PX-ho-cQ9" secondAttribute="bottom" constant="79" id="GGn-9c-5na"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="IS8-Iz-McR"/>
+                            <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="ViH-CN-ERy" secondAttribute="bottom" constant="188" id="KRG-t0-lHB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PX-ho-cQ9" secondAttribute="trailing" constant="19" id="OEe-Af-aZ7"/>
+                            <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="hVP-zd-a88" secondAttribute="bottom" constant="57" id="ROg-P8-cvE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" constant="20" id="Thb-it-aiE"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="TsL-A4-zdY"/>
                             <constraint firstItem="8Df-Ab-AxB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F2V-Qk-kyc" secondAttribute="trailing" constant="8" symbolic="YES" id="dEV-6s-LuI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVP-zd-a88" secondAttribute="trailing" constant="90" id="ecG-OT-ath"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Df-Ab-AxB" secondAttribute="trailing" constant="21" id="ffQ-z9-XLq"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="i3j-Lb-6gD"/>
                             <constraint firstItem="6PX-ho-cQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="jiH-h2-1xu"/>
+                            <constraint firstItem="6PX-ho-cQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="kev-Sf-aYd"/>
+                            <constraint firstItem="6PX-ho-cQ9" firstAttribute="top" secondItem="hVP-zd-a88" secondAttribute="bottom" constant="428" id="mjF-i0-pm0"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="phr-kv-aCX"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="qpe-qW-eEF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F2V-Qk-kyc" secondAttribute="bottom" constant="71" id="sqO-Mn-i3I"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8Df-Ab-AxB" secondAttribute="bottom" constant="71" id="w1m-hf-fMn"/>
+                            <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="wc8-gs-cxZ"/>
                         </constraints>
                     </view>
                     <connections>

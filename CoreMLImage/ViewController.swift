@@ -56,6 +56,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Functions
+    enum matchModelDetection {
+        case with_mask
+        case without_mask
+        case mask
+    }
+    
     func detectImage(){
         dataLabel.text = "Loading..."
 
@@ -73,7 +79,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             DispatchQueue.main.async {
-                self.dataLabel.text = "\(firstResult.identifier)\(Int(firstResult.confidence * 100))%"
+                
+                self.dataLabel.text = " \(firstResult.identifier)\(Int(firstResult.confidence * 100))% of confidence"
                 self.dataLabel.textColor = UIColor.blue
             }
         }
