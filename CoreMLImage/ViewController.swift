@@ -56,11 +56,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Functions
-    enum ModelDetection {
-        case mask_weared_incorrect
-        case without_mask
-        case with_mask
-    }
     
     func detectImage(){
         
