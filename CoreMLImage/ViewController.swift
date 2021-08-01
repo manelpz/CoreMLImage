@@ -80,16 +80,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 
                 switch matchModelDetection {
                 case "with_mask":
-                    textmodelDetection = "wearing mask with  "
+                    textModelDetection = "wearing mask with  "
                 case "without_mask":
-                    textmodelDetection = "no wearing mask with  "
+                    textModelDetection = "no wearing mask with  "
                 case "with_mask":
-                    textmodelDetection = "wearing mask with  "
+                    textModelDetection = "wearing mask with  "
                 default:
-                    textmodelDetection = "0 results found  "
+                    textModelDetection = "0 results found  "
                 }
                 
-                self.dataLabel.text = " \(matchModelDetection) \(Int(firstResult.confidence * 100))% of confidence"
+                self.dataLabel.text = " \(textModelDetection) \(Int(firstResult.confidence * 100))% of confidence"
                 self.dataLabel.textColor = UIColor.blue
             }
         }
