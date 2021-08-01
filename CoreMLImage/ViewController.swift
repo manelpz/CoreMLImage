@@ -14,7 +14,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        //detectImage()
+        
+        //roudned buttons
         TakePhotoButton.layer.cornerRadius =  TakePhotoButton.bounds.size.height/2
         SelectButton.layer.cornerRadius = SelectButton.bounds.size.height/2
     }
@@ -57,8 +58,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //Functions
     func detectImage(){
         dataLabel.text = "Loading..."
-        //maskDetectionModel
-        //MobileNet
+
         guard let model = try? VNCoreMLModel(for: maskDetectionModel().model) else{
             print("Error loading the model")
             return
