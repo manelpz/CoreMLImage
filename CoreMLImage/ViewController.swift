@@ -56,13 +56,14 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Functions
-    enum matchModelDetection {
-        case with_mask
+    enum ModelDetection {
+        case mask_weared_incorrect
         case without_mask
-        case mask
+        case with_mask
     }
     
     func detectImage(){
+        
         dataLabel.text = "Loading..."
 
         guard let model = try? VNCoreMLModel(for: maskDetectionModel().model) else{
@@ -79,8 +80,21 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }
             
             DispatchQueue.main.async {
+                var textModelDetection = ""
+                let matchModelDetection = firstResult.identifier
                 
-                self.dataLabel.text = " \(firstResult.identifier)\(Int(firstResult.confidence * 100))% of confidence"
+                switch matchModelDetection {
+                case "with_mask":
+                    textmodelDetection = "wearing mask with  "
+                case "without_mask":
+                    textmodelDetection = "no wearing mask with  "
+                case "with_mask":
+                    textmodelDetection = "wearing mask with  "
+                default:
+                    textmodelDetection = "0 results found  "
+                }
+                
+                self.dataLabel.text = " \(matchModelDetection) \(Int(firstResult.confidence * 100))% of confidence"
                 self.dataLabel.textColor = UIColor.blue
             }
         }
