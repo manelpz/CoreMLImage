@@ -52,6 +52,11 @@
                                     <constraint firstAttribute="width" constant="375" id="b55-E3-TNI"/>
                                     <constraint firstAttribute="height" constant="375" id="rAb-ec-sZx"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Df-Ab-AxB">
                                 <rect key="frame" x="226" y="751" width="167" height="40"/>
