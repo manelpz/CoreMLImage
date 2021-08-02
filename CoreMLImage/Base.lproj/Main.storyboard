@@ -41,12 +41,17 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large" weight="medium"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ButtonTakePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0f-tD-K94"/>
                                     <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bfx-xN-FHO"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="258" verticalHuggingPriority="251" image="2" translatesAutoresizingMaskIntoConstraints="NO" id="ViH-CN-ERy">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="258" verticalHuggingPriority="251" image="photo_background" translatesAutoresizingMaskIntoConstraints="NO" id="ViH-CN-ERy">
                                 <rect key="frame" x="19" y="187" width="375" height="375"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="375" id="b55-E3-TNI"/>
@@ -54,33 +59,39 @@
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
+                                        <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Df-Ab-AxB">
                                 <rect key="frame" x="226" y="751" width="167" height="40"/>
-                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="167" id="6Zx-bf-QI2"/>
                                     <constraint firstAttribute="height" constant="40" id="vW6-oy-Zlh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <color key="tintColor" systemColor="systemTealColor"/>
                                 <state key="normal" title="Select photo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" systemColor="tertiarySystemBackgroundColor"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="selectPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bln-Xo-Wfq"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Proof of concept" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hVP-zd-a88">
                                 <rect key="frame" x="90" y="100" width="234" height="30"/>
-                                <color key="tintColor" red="0.33488750960000002" green="0.67764088779999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uYL-72-lHj"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
-                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="systemBlueColor"/>
                                 <color key="highlightedColor" red="1" green="0.1213044363" blue="0.1094311161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                         </subviews>
@@ -102,8 +113,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVP-zd-a88" secondAttribute="trailing" constant="90" id="ecG-OT-ath"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Df-Ab-AxB" secondAttribute="trailing" constant="21" id="ffQ-z9-XLq"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="i3j-Lb-6gD"/>
-                            <constraint firstItem="6PX-ho-cQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="jiH-h2-1xu"/>
-                            <constraint firstItem="6PX-ho-cQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="kev-Sf-aYd"/>
                             <constraint firstItem="6PX-ho-cQ9" firstAttribute="top" secondItem="hVP-zd-a88" secondAttribute="bottom" constant="428" id="mjF-i0-pm0"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="phr-kv-aCX"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="qpe-qW-eEF"/>
@@ -125,7 +134,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="2" width="1000" height="667"/>
+        <image name="photo_background" width="258" height="240"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -133,6 +142,15 @@
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
     </resources>

@@ -60,7 +60,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func detectImage(){
         
         dataLabel.text = "Loading..."
-        self.dataLabel.textColor = UIColor.blue
+        self.dataLabel.textColor = UIColor.lightGray
 
         guard let model = try? VNCoreMLModel(for: maskDetectionModel().model) else{
             print("Error loading the model")
@@ -82,13 +82,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
                 switch matchModelDetection {
                 case "with_mask":
                     textModelDetection = "Wearing mask with "
-                    self.dataLabel.textColor = UIColor(hue: 0.3222, saturation: 1, brightness: 0.68, alpha: 1.0)
+                    self.dataLabel.textColor = UIColor.gray//(hue: 0.3222, saturation: 1, brightness: 0.68, alpha: 1.0)
                 case "without_mask":
                     textModelDetection = "No wearing mask with "
-                    self.dataLabel.textColor = UIColor(hue: 0.9972, saturation: 1, brightness: 0.76, alpha: 1.0)
+                    self.dataLabel.textColor = UIColor.gray//(hue: 0.9972, saturation: 1, brightness: 0.76, alpha: 1.0)
                 case "mask_weared_incorrect":
                     textModelDetection = "Mask weared incorrect with "
-                    self.dataLabel.textColor = UIColor(hue: 0.0389, saturation: 1, brightness: 0.89, alpha: 1.0)
+                    self.dataLabel.textColor = UIColor.gray//(hue: 0.0944, saturation: 1, brightness: 0.86, alpha: 1.0)
                 default:
                     textModelDetection = "0 Results found "
                 }
