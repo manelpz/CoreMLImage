@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,16 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take or Select a photo" textAlignment="center" lineBreakMode="clip" numberOfLines="0" minimumFontSize="21" translatesAutoresizingMaskIntoConstraints="NO" id="6PX-ho-cQ9">
-                                <rect key="frame" x="80" y="558" width="254" height="113"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="113" id="PL8-wJ-1dZ"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="113" id="n9J-l9-tRW"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="highlightedColor" name="AccentColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="spatial" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F2V-Qk-kyc">
                                 <rect key="frame" x="19" y="750" width="167" height="41"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
@@ -69,7 +58,7 @@
                                 <rect key="frame" x="226" y="751" width="167" height="40"/>
                                 <color key="backgroundColor" systemColor="systemTealColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="167" id="6Zx-bf-QI2"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="167" id="6Zx-bf-QI2"/>
                                     <constraint firstAttribute="height" constant="40" id="vW6-oy-Zlh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -96,35 +85,32 @@
                                 <color key="textColor" systemColor="systemTealColor"/>
                                 <color key="highlightedColor" red="1" green="0.1213044363" blue="0.1094311161" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="P0e-qg-ErX">
-                                <rect key="frame" x="62" y="632" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Take or Select a photo" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="P0e-qg-ErX">
+                                <rect key="frame" x="77" y="598" width="259" height="63"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.44253966970000003" green="0.44253966970000003" blue="0.44253966970000003" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="P0e-qg-ErX" secondAttribute="bottom" constant="89" id="36k-lU-SEF"/>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="3rU-6a-bdc"/>
-                            <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="6PX-ho-cQ9" secondAttribute="bottom" constant="79" id="8ZQ-OI-pdD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" constant="20" id="EdH-Ov-kcc"/>
-                            <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="6PX-ho-cQ9" secondAttribute="bottom" constant="79" id="GGn-9c-5na"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="IS8-Iz-McR"/>
                             <constraint firstItem="F2V-Qk-kyc" firstAttribute="top" secondItem="ViH-CN-ERy" secondAttribute="bottom" constant="188" id="KRG-t0-lHB"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="hVP-zd-a88" secondAttribute="bottom" constant="57" id="ROg-P8-cvE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ViH-CN-ERy" secondAttribute="trailing" constant="20" id="Thb-it-aiE"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="TsL-A4-zdY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6PX-ho-cQ9" secondAttribute="trailing" constant="80" id="ceM-pV-aFs"/>
+                            <constraint firstItem="P0e-qg-ErX" firstAttribute="top" secondItem="ViH-CN-ERy" secondAttribute="bottom" constant="36" id="XfQ-Fs-bTd"/>
+                            <constraint firstItem="P0e-qg-ErX" firstAttribute="centerX" secondItem="ViH-CN-ERy" secondAttribute="centerX" id="aoI-uu-uXI"/>
+                            <constraint firstItem="P0e-qg-ErX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="77" id="cLm-XW-ylF"/>
                             <constraint firstItem="8Df-Ab-AxB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="F2V-Qk-kyc" secondAttribute="trailing" constant="8" symbolic="YES" id="dEV-6s-LuI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hVP-zd-a88" secondAttribute="trailing" constant="90" id="ecG-OT-ath"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8Df-Ab-AxB" secondAttribute="trailing" constant="21" id="ffQ-z9-XLq"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="i3j-Lb-6gD"/>
-                            <constraint firstItem="6PX-ho-cQ9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="80" id="lyD-3i-vwN"/>
-                            <constraint firstItem="6PX-ho-cQ9" firstAttribute="top" secondItem="hVP-zd-a88" secondAttribute="bottom" constant="428" id="mjF-i0-pm0"/>
                             <constraint firstItem="hVP-zd-a88" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="56" id="phr-kv-aCX"/>
                             <constraint firstItem="ViH-CN-ERy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="143" id="qpe-qW-eEF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="F2V-Qk-kyc" secondAttribute="bottom" constant="71" id="sqO-Mn-i3I"/>
@@ -136,7 +122,7 @@
                         <outlet property="SelectButton" destination="8Df-Ab-AxB" id="Lg4-NH-a6I"/>
                         <outlet property="TakePhotoButton" destination="F2V-Qk-kyc" id="RcR-Hp-8nA"/>
                         <outlet property="dataImage" destination="ViH-CN-ERy" id="anj-bm-hst"/>
-                        <outlet property="dataLabel" destination="6PX-ho-cQ9" id="IIU-hL-Q0r"/>
+                        <outlet property="dataText" destination="P0e-qg-ErX" id="Idw-e6-Mci"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -146,12 +132,6 @@
     </scenes>
     <resources>
         <image name="photo_background" width="258" height="240"/>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
