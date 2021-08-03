@@ -54,12 +54,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Functions
+
     
     func detectImage(){
-        
         dataText.text = "Loading..."
         self.dataText.textColor = UIColor.lightGray
-
+        
         guard let model = try? VNCoreMLModel(for: maskDetectionModel().model) else{
             print("Error loading the model")
             return
