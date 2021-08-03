@@ -42,18 +42,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             fatalError("No access allowed to camera")
         }
     }
-    /*@IBAction func takePhoto(_ sender: Any) {
-       
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera){
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerController.SourceType.camera
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
-        }else{
-            fatalError("No access allowed to camera")
-        }
-    }*/
     
     @IBAction func selectPhoto(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
