@@ -5,12 +5,12 @@ CoreML image App 📱
 
 ### Resources
 
-***
+
 
 I took the DataSet of photos from kaggle.com
 
 ### Model with CoreML
-***
+
 
 This Model detect three types of patterns: 
 
