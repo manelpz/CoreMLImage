@@ -14,9 +14,9 @@ I took the DataSet of photos from kaggle.com
 
 This Model detect three types of patterns: 
 
-> wearking mask
-> no mask wearing
-> wearing mask incorrect 
+- Wearking mask
+- No mask wearing
+- Wearing mask incorrect 
 
 with a:
 
@@ -24,8 +24,9 @@ with a:
 - Validation Accurancy of 98.1%
 - 25 iterations
 
->It doesnt include Augmentations
-
+```bash
+It doesnt include Augmentations
+```
 
 ***
 <img src="public/coreML.gif" alt="readme gif">
