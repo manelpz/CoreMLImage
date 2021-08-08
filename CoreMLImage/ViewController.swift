@@ -41,6 +41,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
     }
     
+    
     @IBAction func selectPhoto(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
             let imagePicker = UIImagePickerController()
@@ -54,8 +55,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     //Functions
-
-    
     func detectImage(){
         dataText.text = "Loading..."
         self.dataText.textColor = UIColor.lightGray
@@ -99,8 +98,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             print("CIImage not loaded from UIImage")
             return
         }
-        
-        
         
         //run request
         
