@@ -20,8 +20,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         SelectButton.layer.cornerRadius = SelectButton.bounds.size.height/2
     }
     
-    //variables
-    
     //IBOutlet
     @IBOutlet var dataImage: UIImageView!
     @IBOutlet var dataText: UITextView!
@@ -40,8 +38,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             fatalError("No access allowed to camera")
         }
     }
-    
-    
+     
     @IBAction func selectPhoto(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.photoLibrary){
             let imagePicker = UIImagePickerController()
