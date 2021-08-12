@@ -3,7 +3,6 @@
 //  CoreMLImage
 //
 //  Created by Emmanuel Lopez Guerrero on 12/07/21.
-//ff
 
 import UIKit
 import Vision
