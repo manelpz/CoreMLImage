@@ -12,8 +12,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
         //roudned buttons
         TakePhotoButton.layer.cornerRadius =  TakePhotoButton.bounds.size.height/2
         SelectButton.layer.cornerRadius = SelectButton.bounds.size.height/2
