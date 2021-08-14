@@ -1,7 +1,5 @@
-//
 //  ViewController.swift
 //  CoreMLImage
-//
 //  Created by Emmanuel Lopez Guerrero on 12/07/21.
 
 import UIKit
@@ -9,7 +7,6 @@ import Vision
 import CoreML
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         //roudned buttons
@@ -94,7 +91,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         }
         
         //run request
-        
         let handler = VNImageRequestHandler(ciImage: ciimage)
         
         DispatchQueue.global(qos: .userInitiated).async {
@@ -103,11 +99,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             }catch{
                 print(error.localizedDescription)
             }
-            
-           
         }
-        
-        
     }
     
     //System Functions
@@ -121,7 +113,5 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         detectImage()
     }
-
-
 }
 
