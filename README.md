@@ -5,8 +5,6 @@ CoreML image App 📱
 
 ### Resources
 
-
-
 I took the DataSet of photos from kaggle.com
 
 ### Model with CoreML
