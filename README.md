@@ -3,7 +3,7 @@ CoreML image App 📱
 
 ***
 
-### Resources
+### Resource
 
 I took the DataSet of photos from kaggle.com
 
